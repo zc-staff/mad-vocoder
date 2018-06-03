@@ -6,9 +6,9 @@ function out = get_key(name, fq, k)
     out = get_source(name, k);
     out = resample2(out, fq0, fq);
     out = filter4(out, OFS, fq);
-    end
+end
 
-    function out = filter4 (x, fs, fq)
+function out = filter4 (x, fs, fq)
     n = length(x);
     t = ceil((n + 1) / 2);
 
